@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionPort | Traffic Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">VISION<span>PORT</span></div>
+        <div class="status">
+            <span class="dot"></span> SYSTEM ONLINE
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="tag">AI-POWERED TRAFFIC INTELLIGENCE</p>
+            <h1>See Traffic.<br><span>Understand More.</span></h1>
+            <p class="subtitle">
+                Upload a traffic image and let YOLOv8 identify
+                vehicles and pedestrians automatically.
+            </p>
+        </section>
+
+        <section class="workspace">
+
+            <div class="panel">
+                <h2>Input Image</h2>
+                <p class="description">Upload a traffic photograph</p>
+
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="imageInput" accept="image/*" hidden>
+
+                    <div id="uploadContent">
+                        <div class="upload-icon">↑</div>
+                        <h3>Drop your image here</h3>
+                        <p>or click to browse files</p>
+                        <small>JPG, JPEG, PNG supported</small>
+                    </div>
+
+                    <img id="preview" alt="Uploaded image preview">
+                </div>
+
+                <button id="detectBtn" disabled>
+                    RUN DETECTION →
+                </button>
+            </div>
+
+            <div class="panel">
+                <h2>Detection Output</h2>
+                <p class="description">YOLOv8 annotated results</p>
+
+                <div class="result-area">
+                    <img id="result" alt="Detection result">
+                    <div id="placeholder">
+                        <div class="scan-icon">⌕</div>
+                        <p>Detection results will appear here</p>
+                    </div>
+                </div>
+
+                <div id="message">Awaiting image input...</div>
+                <a id="downloadBtn" download="visionport-result.jpg">
+                    DOWNLOAD RESULT ↓
+                </a>
+            </div>
+
+        </section>
+
+        <footer>
+            VISIONPORT © 2026 | POWERED BY YOLOv8
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
